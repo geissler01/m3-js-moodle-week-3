@@ -12,13 +12,13 @@ let notes = [];
 // funcion para agregar notas
 function addNotes() {
     localStorage.setItem('notas', JSON.stringify(notes));
-    console.log(`Guardadas ${notas.lenght} nota(s) en localStorage`)
+    console.log(`Guardadas ${notes.length} nota(s) en localStorage`)
 }
 //
 function createNoteElement(text, indice) {
     const li = document.createElement('li');
     
-    // texto
+    // text, añade ese argumento como texto
     li.textContent = text;
     const btnRemove = document.createElement('button');
     btnRemove.textContent = 'Eliminar';
@@ -57,9 +57,9 @@ function loadNotes() {
     if (notesSaved) {
         notes = JSON.parse(notesSaved);
         renderNotes();
-        console.log(`Se cargaron ${notes.lenght} notas(s) desde localStorage`)
+        console.log(`Se cargaron ${notes.length} notas(s) desde localStorage`)
     } else {
-        console.log('No hay natas guardadas');
+        console.log('No hay notas guardadas');
     }
 }
 
@@ -77,7 +77,7 @@ buttonAdd.addEventListener("click", () => {
     notes.push(texto);
 
     // limpiamos y enficamos el input
-    inputNotes.valie = '';
+    inputNotes.value = '';
     inputNotes.focus();
 
     // actualizamos la vista;

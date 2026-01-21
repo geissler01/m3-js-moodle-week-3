@@ -19,32 +19,21 @@
     <div class="container">
         <div class="caja d-flex flex-column align-items-center">
             <div class="col-8 text-center">
-                <h1 class="title">Lista de notas</h1>
+                <h1 class="title mb-5 mt-5">Lista de notas</h1>
                 <p class="text">Escribe una nota y preciona "Agregar". Las notas se guardan en el navegador</p>
             </div>
 
             <div class="col-4">
                 <form action="" class="d-flex gap-2">
-                    <input type="number" class="form-control notes">
+                    <input type="text" class="form-control notes" id="notes">
                     <button class="btn btn-success" id="add">Agreagr</button>
                 </form>
             </div>
         </div>
-        <div class="list">
-            <ul class="notesList"></ul>
+        <div class="list d-flex justify-content-center mt-3">
+            <ul class="notesList col-6"></ul>
         </div>
-
     </div>
-
-    <!-- <h1>Lista de Notas</h1>
-    <p>Escribe una nota y presiona "Agregar". Las notas se guardan en el navegador.</p>
-
-    <div class="input-container">
-        <input type="text" id="notaInput" placeholder="Escribe tu nota aquí..." />
-        <button id="btnAgregar">Agregar</button>
-    </div>
-
-    <ul id="listaNotas"></ul> -->
 </body>
 
 </html>
